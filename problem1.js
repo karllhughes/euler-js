@@ -1,8 +1,8 @@
 /*
  * Problem 1
  * https://projecteuler.net/problem=1
- * 
  */
+
 "use strict";
 
 let count = 1;
