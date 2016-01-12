@@ -6,27 +6,22 @@
 "use strict";
 
 const max = 2000000;
-let c = 1;
-let sum = 0;
-
-while (c < max) {
-    if(isPrime(c)) {
-        console.log(c);
-        sum += c;
-    }
-    c++;
+var values = [];
+for (var i = 0; i <= max; i++) {
+    values.push(i);
 }
-console.log(sum);
+values[0] = 0; values[1] = 0;
 
-function isPrime(num) {
-    for(var div = 2; div < num; div++) {
-        if(divisibleBy(num, div)) {
-            return false;
+for (let i = 2; i <= Math.floor(Math.sqrt(max)); i++) {
+    if (values[i] > 0) {
+        let k = 0;
+        for (let j = i*i; j <= max; j = (i*i) + (i*k)) {
+            values[j] = 0;
+            k++;
         }
     }
-    return num > 1;
 }
 
-function divisibleBy(num, div) {
-    return num % div === 0;
-}
+let sum = values.reduce(function(pv, cv) { return pv + cv; }, 0);
+
+console.log(sum);
