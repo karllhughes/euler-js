@@ -19,7 +19,8 @@ exports.isPrime = function(num) {
     return num > 1;
 }
 
-// Gets prime numbers through a maximum using 
+// Gets prime numbers through a maximum using Sieve of Eratoshtenes 
+// Reference: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 exports.getPrimes = function(max)
 {
     let values = [];

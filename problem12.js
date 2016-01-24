@@ -8,14 +8,14 @@
 const euler = require("./euler.js");
 const max = 10000000;
 const divisors = 500;
+let tri = 0;
+let i = 1;
 
-for (let i = 0; i < max; i++) {
-    let tri = triNum(i);
-    if (countDivisors(tri) >= divisors) {
-        console.log(tri);
-        break;
-    }
+while (countDivisors(tri) < divisors) {
+    tri = triNum(i);
+    i++;
 }
+console.log(tri);
 
 function countDivisors(num) {
     let count = 0;
