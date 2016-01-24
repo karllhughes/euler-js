@@ -6,8 +6,7 @@
 "use strict";
 
 const euler = require("./euler.js");
-
-const max = 100000;
+const max = 10000000;
 const divisors = 500;
 
 for (let i = 0; i < max; i++) {
@@ -20,8 +19,8 @@ for (let i = 0; i < max; i++) {
 
 function countDivisors(num) {
     let count = 0;
-    for (let i = 1; i <= num; i++) {
-        if (divisibleBy(num, i)) {
+    for (let i = 1; i <= Math.sqrt(num); i++) {
+        if (euler.divisibleBy(num, i)) {
             count++;
         }
     }
@@ -34,8 +33,4 @@ function triNum(n) {
         sum += i;
     }
     return sum;
-}
-
-function divisibleBy(num, div) {
-    return num % div === 0;
 }
