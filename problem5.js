@@ -5,6 +5,7 @@
 
 "use strict";
 
+const euler = require("./euler.js");
 let number = 1;
 
 while(number) {
@@ -17,13 +18,9 @@ while(number) {
 
 function divisibleByAll(number, max) {
     for(var i = 1; i <= max; i++) {
-        if(divisibleBy(number, i) == false) {
+        if(euler.divisibleBy(number, i) == false) {
             return false;
         }
     }
     return true;
-}
-
-function divisibleBy(num, div) {
-    return num % div === 0;
 }

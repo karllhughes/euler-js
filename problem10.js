@@ -6,11 +6,11 @@
 
 "use strict";
 
-const shared = require("./shared.js");
+const euler = require("./euler.js");
 
 const max = 2000000;
 
-let primes = shared.getPrimes(max);
-let sum = primes.reduce(function(pv, cv) { return pv + cv; }, 0);
+let primes = euler.getPrimes(max);
+let sumOfPrimes = primes.reduce(function(pv, cv) { return pv + cv; }, 0);
 
-console.log(sum);
+console.log(sumOfPrimes);

@@ -5,6 +5,7 @@
 
 "use strict";
 
+const euler = require("./euler.js");
 let i = 100;
 let j = 100;
 let result = 0;
@@ -26,7 +27,7 @@ console.log(result);
 
 function isPalindromic(num) {
     let array = (""+num).split("");
-    if(divisibleBy(array.length, 2)) {
+    if(euler.divisibleBy(array.length, 2)) {
         let halfArrayLength = array.length / 2;
         let firstHalf = "";
         let secondHalf = "";
@@ -42,8 +43,4 @@ function isPalindromic(num) {
         }
     }
     return false;
-}
-
-function divisibleBy(num, div) {
-    return num % div === 0;
 }

@@ -5,7 +5,7 @@
 
 "use strict";
 
-let count = 100;
+const count = 100;
 let sumOfSquares = 0;
 let sumOfNumbers = 0;
 

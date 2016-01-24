@@ -5,7 +5,7 @@
 
 "use strict";
 
-const shared = require("./shared.js");
+const euler = require("./euler.js");
 
 const max = 100000;
 const divisors = 500;

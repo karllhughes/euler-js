@@ -9,6 +9,16 @@ exports.divisibleBy = function(num, div) {
     return num % div === 0;
 }
 
+// Check to see if a number is prime or not
+exports.isPrime = function(num) {
+    for(var div = 2; div < num; div++) {
+        if(exports.divisibleBy(num, div)) {
+            return false;
+        }
+    }
+    return num > 1;
+}
+
 // Gets prime numbers through a maximum using 
 exports.getPrimes = function(max)
 {
